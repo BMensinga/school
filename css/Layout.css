@@ -1,0 +1,21 @@
+.header {
+  padding: 60px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+} 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  min-width: 500px;
+  text-align: center;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+  
