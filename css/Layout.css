@@ -1,21 +1,45 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 .header {
-  padding: 60px;
+  padding: 20px;
   text-align: center;
-  background: black;
+  background: lightskyblue;
   color: white;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
 } 
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  min-width: 500px;
-  text-align: center;
+/* ---------------About us text------------------*/
+.text-wrapper {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    width: 600px;
 }
+.tekst {
+    background: lightblue;
+    height: 250px;
+    width: 300px;
+    text-align: center;
+}
+.tekst1 {
+    background: lightgreen;
+    height: 250px;
+    width: 300px;
+    text-align: center;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
+
+/* ---------------Navigation bar------------------*/
+
 }
 header nav {
     height: 100px;
@@ -121,4 +145,16 @@ margin: 0 50px;
     right: 5%;
 }
 
+/* ---------------This is the footer------------------*/
+
+.footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: lightskyblue;
+        color: white;
+        text-align: center;
+        padding: 1px;
+}
   
