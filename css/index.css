@@ -13,13 +13,41 @@ body {
     box-sizing: inherit;
 }
 
-p {
+p, h1, label {
     font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.container--text-margin p {
+    margin: 0;
+}
+
+.container--text-margin p:first-child {
+    padding-top: 25px;
+}
+
+.container--text-margin p:last-child {
+    padding-bottom: 25px;
+}
+
+.form--item input {
+    width: 250px;
+}
+
+.form--item {
+    margin: 8px 0;
+}
+
+.form--button {
+    margin-top: 16px;
 }
 
 /* Nav */
 
-img {
+.logo--image, .flex--wrapper img, .front img {
     width: 100%;
     max-height: 257px;
     object-fit: cover;
@@ -83,7 +111,29 @@ button:hover {
     transition: .2s;
 }
 
-/* index.html */
+/* Footer */
+
+footer {
+    margin-top: 50px;
+    background-color: #4ECECE;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.footer--small-note {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.footer--heart {
+    color: red;
+}
 
 .flex--wrapper {
     display: flex;
@@ -98,25 +148,46 @@ button:hover {
     margin: auto;
 }
 
+.block {
+    display: block;
+}
+
+/* index.html */
+
 .logo--wrapper {
-    height: 52px;
+    height: 100px;
     align-self: center;
-    text-align: center;
+}
+
+.logo--wrapper a {
+    height: inherit;
 }
 
 .logo--image {
     height: inherit;
     width: auto;
+    margin-left: 50px;
+}
+
+.container--w2, .container--w3 {
+    display: grid;
+    min-height: 257px;
 }
 
 .container--w2 {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 257px;
+}
+
+.container--w3 {
+    grid-template-columns: 1.5fr 1fr 1fr;
 }
 
 .container--p50 {
     margin: 0 50px;
+}
+
+.container--p100 {
+    margin: 0 100px;
 }
 
 .front {
@@ -132,6 +203,10 @@ button:hover {
 }
 
 /* over_ons.html */
+
+.header h1 {
+    text-align: center;
+}
 
 .text-wrapper {
     margin: auto;
@@ -155,14 +230,6 @@ button:hover {
 
 /* contact.html */
 
-img {
-    width: 300px;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-}
-
-p {
-    color: red;
+.opening-schedule {
+    display: inline-block;
 }
