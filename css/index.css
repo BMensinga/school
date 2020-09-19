@@ -1,5 +1,16 @@
-body, html {
+/* Default */
+
+html {
+    box-sizing: border-box;
     margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 p {
@@ -72,6 +83,8 @@ button:hover {
     transition: .2s;
 }
 
+/* index.html */
+
 .flex--wrapper {
     display: flex;
     align-items: center;
@@ -103,7 +116,7 @@ button:hover {
 }
 
 .container--p50 {
-margin: 0 50px;
+    margin: 0 50px;
 }
 
 .front {
@@ -116,4 +129,40 @@ margin: 0 50px;
     position: absolute;
     bottom: 10%;
     right: 5%;
+}
+
+/* over_ons.html */
+
+.text-wrapper {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    width: 600px;
+}
+.tekst {
+    background: lightblue;
+    height: 250px;
+    width: 300px;
+    text-align: center;
+}
+.tekst1 {
+    background: lightgreen;
+    height: 250px;
+    width: 300px;
+    text-align: center;
+}
+
+/* contact.html */
+
+img {
+    width: 300px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: red;
 }
