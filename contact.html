@@ -2,59 +2,113 @@
 <html lang="nl">
 <head>
   <title>Contact</title>
-  <link href="css/design.css" type="text/css" rel="stylesheet">
+  <link href="css/index.css" type="text/css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <p><a href="index.html"><img src=images/logo.png alt="logo"></a></p>
-  <p><a href="over_ons.html">Over ons</a></p>
-  <p><a href="contact.html">Contact</a></p>
+  <header>
+    <nav>
+      <div class="logo--wrapper">
+        <a href="index.html"><img class="logo--image" src="images/logo.png"/></a>
+      </div>
+      <ul>
+        <li><a href="over_ons.html"><p>Over ons</p></a></li>
+        <li><a href="contact.html"><p>Contact</p></a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <p><h2>Biker</h2></p>
+  <div class="container--p50">
+    <section class="header">
+      <h1>Biker</h1>
+    </section>
 
-  <p><img src=images/filiaal.jpg></p>
+    <section class="container--w3">
+      <div class="flex--wrapper">
+        <img src=images/filiaal.jpg>
+      </div>
+      <div class="flex--wrapper opening-schedule">
+        <p>Openingstijden:</p>
+        <table>
+          <tr>
+            <td><p>Maandag</p></td>
+            <td><p>08:00-18:00</p></td>
+          </tr>
+          <tr>
+            <td><p>Dinsdag</p></td>
+            <td><p>08:00-18:00</p></td>
+          </tr>
+          <tr>
+            <td><p>Woensdag</p></td>
+            <td><p>08:00-18:00</p></td>
+          </tr>
+          <tr>
+            <td><p>Donderdag</p></td>
+            <td><p>08:00-18:00</p></td>
+          </tr>
+          <tr>
+            <td><p>Vrijdag</p></td>
+            <td><p>08:00-18:00</p></td>
+          </tr>
+          <tr>
+            <td><p>Zaterdag</p></td>
+            <td><p>10:00-17:00</p></td>
+          </tr>
+          <tr>
+            <td><p>Zondag</p></td>
+            <td><p>GESLOTEN</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="flex--wrapper block">
+        <p>Informatie:<br/><br/>
 
-  <p><pre>
-  Openingstijden:
+        Biker<br/>
+        Fiets verhuur<br/><br/>
 
-  Maandag     08:00-18:00
-  Dinsdag     08:00-18:00
-  Woensdag    08:00-18:00
-  Donderdag   08:00-18:00
-  Vrijdag     08:00-18:00
-  Zaterdag    10:00-17:00
-  Zondag      GESLOTEN
-  </pre></p>
+        Fietsstraat 10<br/>
+        1234AB Den Haag<br/><br/>
 
-  <p><pre>
-  Informatie:
+        T: (070) 399 12 34<br/>
+        E: info@biker.nl
+        </p>
+      </div>
+    </section>
 
-  Biker
-  Fiets verhuur
+    <section class="container--p100">
+      <div class="container--text-margin">
+        <p class="title">Contact Formulier</p>
+        <p>Heeft u nog een vraag, compliment of opmerking meld deze dan gerust.
+        </p>
+      </div>
 
-  Fietsstraat 10
-  1234AB Den Haag
+      <form class="form" action="#">
+        <div class="form--item">
+          <label>Naam *</label><br/>
+          <input type="text" name="naam">
+        </div>
+        <div class="form--item">
+          <label>E-mailadres *</label><br/>
+          <input type="text" name="mail">
+        </div>
+        <div class="form--item">
+          <label>Onderwerp *</label><br/>
+          <input type="text" name="onderwerp">
+        </div>
+        <div class="form--item">
+          <label>Bericht *</label><br/>
+          <input type="text" name="bericht">
+        </div>
+        <button class="form--button" type="submit">Versturen</button>
+      </form>
+    </section>
 
-  T: (070) 399 12 34
-  E: info@biker.nl
-  </pre></p>
+  </div>
 
-  <p><pre>
-  <b>Contact Formulier</b>
-  Heeft u nog een vraag, compliment of opmerking
-  meld deze dan gerust.
-
-  <form action="#">
-    <label>Naam *</label>
-    <input type="text" name="naam"><br><br>
-    <label>E-mailadres</label>
-    <input type="text" name="mail"><br><br>
-    <label>Onderwerp *</label>
-    <input type="text" name="onderwerp"><br><br>
-    <label>Bericht *</label>
-    <input type="text" name="bericht"><br><br>
-    <input type="submit" value="Versturen"></form>
-  </pre></p>
+  <footer class="container--text-margin">
+    <p>Copyright &copy; 2020 - DBT Software</p>
+    <p class="footer--small-note">Crafted with <span class="footer--heart">&#10084;</span> by Dylan</p>
+  </footer>
 </body>
 </html>
 
