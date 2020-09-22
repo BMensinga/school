@@ -234,10 +234,6 @@ footer p {
     width: 300px;
     text-align: center;
 }
-.picture {
-    text-align: center;
-    margin-top: 50px;
-}
 .flex-center {
     display: flex;
     justify-content: center;
