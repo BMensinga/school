@@ -213,6 +213,10 @@ footer p {
 
 .header h1 {
     text-align: center;
+    color: #4ECECE;
+    font-size: 50px;
+    background-color: var(--main-text-color);
+    color: white;
 }
 
 .text-wrapper {
@@ -220,19 +224,24 @@ footer p {
     width: 100%;
     position: relative;
     display: flex;
-    width: 600px;
+    width: 1000px;
+
 }
 .tekst {
     background: lightblue;
-    height: 250px;
-    width: 300px;
+    height: 400px;
+    width: 500px;
     text-align: center;
+    margin-right: 50px;
+    border: 1px solid black;
 }
 .tekst1 {
     background: rgb(119, 192, 119);
-    height: 250px;
-    width: 300px;
+    height: 400px;
+    width: 500px;
     text-align: center;
+    margin-left: 50px;
+    border: 1px solid black;
 }
 .flex-center {
     display: flex;
