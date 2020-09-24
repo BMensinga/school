@@ -218,10 +218,11 @@ footer p {
 
 .header h1 {
     text-align: center;
-    color: #4ECECE;
+    color: var(--main-background-color);
     font-size: 50px;
     background-color: var(--main-text-color);
-    color: white;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .text-wrapper {
@@ -232,15 +233,15 @@ footer p {
 }
 
 .text-wrapper--company-container {
-    text-align: center;
     justify-content: space-between;
 }
 
 .text-wrapper--company-text {
-    background: lightblue;
-    text-align: center;
-    border: 1px solid black;
+    background: var(--main-text-color);
     width: calc(50% - 50px);
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
 }
 
 .flex-center {
@@ -251,20 +252,26 @@ footer p {
 .flex-container {
     background: rgb(255, 255, 255);
     margin-top: 50px;
-    width: 1000px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    display: flex;
     margin-bottom: 20px;
 }
 
 .flex-item {
     text-align: center;
     box-sizing: border-box;
-    border: 1px solid black;
     flex: 1 0 100px;
     height: 100%;
+}
+
+.flex-item:first-child img {
+    border-radius: 10px 0 0 10px;
+}
+
+.flex-item:last-child img {
+    border-radius: 0 10px 10px 0;
 }
 
 img {
