@@ -92,7 +92,16 @@ header nav ul li p {
     color: var(--main-text-color);
 }
 
-header nav ul li p:hover {
+header nav ul li svg {
+    transition: .2s;
+    fill: var(--main-text-color);
+    border-bottom: 2px solid var(--main-background-color);
+    padding 4px 0;
+    height: 29.2px;
+    margin: 16px 0;
+}
+
+header nav ul li p:hover, header nav ul li svg:hover  {
     border-bottom: 2px solid var(--main-text-color);;
     color: var(--main-text-color);
 }
@@ -283,4 +292,84 @@ img {
 
 .opening-schedule {
     display: inline-block;
+}
+
+/* assortiment.html */
+
+.shop--item {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    background-color: var(--main-text-color);
+}
+
+.shop--item-text {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--main-text-color);
+    color: var(--main-background-color);
+    border-radius: 0 0 10px 10px;
+}
+
+.shop {
+    display: block;
+}
+
+.shop--container {
+    grid-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.shop--item-text__price {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* winkelwagen.html */
+.checkout table {
+    margin: auto;
+}
+
+.checkout table td img {
+    border-radius: 10px;
+}
+
+.checkout table th:nth-child(1), .checkout table td:nth-child(1) {
+    width: 300px;
+}
+
+.checkout table th:nth-child(2), .checkout table td:nth-child(2) {
+    width: 300px;
+}
+
+.checkout table th:nth-child(n+3), .checkout table td:nth-child(n+3) {
+    width: 150px;
+}
+
+.checkout table td {
+    height: 200px;
+}
+
+.checkout table .info p {
+    width: calc(100% - 20px);
+    margin: auto;
+}
+
+.checkout table .number {
+    text-align: center;
+    width: 50px;
+}
+
+.checkout table .number input {
+    width: 50px;
+}
+
+.checkout table .price {
+    text-align: center;
+}
+
+button[type="submit"] {
+    float: right;
 }
