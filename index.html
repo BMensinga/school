@@ -5,21 +5,8 @@
     <title>Homepage</title>
     <link href="css/index.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="application/javascript">
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if (!isChrome){
-            $('#iframeAudio').remove()
-        }
-        else {
-            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background
-        }
-    </script>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="videoplayback.weba" type="audio/webm">
-    </audio>
     <header>
         <nav>
             <div class="logo--wrapper">
