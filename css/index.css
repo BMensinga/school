@@ -96,7 +96,7 @@ header nav ul li svg {
     transition: .2s;
     fill: var(--main-text-color);
     border-bottom: 2px solid var(--main-background-color);
-    padding 4px 0;
+    padding: 4px 0;
     height: 29.2px;
     margin: 16px 0;
 }
@@ -328,6 +328,7 @@ img {
 }
 
 /* winkelwagen.html */
+
 .checkout table {
     margin: auto;
 }
@@ -372,4 +373,58 @@ img {
 
 button[type="submit"] {
     float: right;
+}
+
+/* accesoires.html */
+
+.checkout-accesoires table {
+    margin: auto;
+}
+
+.checkout-accesoires table td img {
+    border-radius: 10px;
+}
+
+.checkout-accesoires table th:nth-child(1), .checkout table td:nth-child(1) {
+    width: 200px;
+}
+
+.checkout-accesoires table th:nth-child(2), .checkout table td:nth-child(2) {
+    width: 300px;
+}
+
+.checkout-accesoires table th:nth-child(n+3), .checkout table td:nth-child(n+3) {
+    width: 175px;
+}
+
+.checkout-accesoires table td {
+    height: 125px;
+}
+
+.checkout-accesoires table .info p {
+    width: calc(100% - 20px);
+    margin: auto;
+}
+
+.checkout-accesoires table .number {
+    text-align: center;
+    width: 50px;
+}
+
+.checkout-accesoires table .number input {
+    width: 35px;
+}
+
+.checkout-accesoires table .price {
+    text-align: center;
+}
+
+button[type="submit"] {
+    float: right;
+}
+.helmet-image {
+    height: 100px;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
