@@ -40,8 +40,22 @@ p, h1, label {
     padding-bottom: 25px;
 }
 
-.form--item input {
-    width: 250px;
+.form--contact {
+    max-width: 400px;
+}
+
+.form--checkout {
+    width: 100%;
+}
+
+.form--item input, .form--item textarea {
+    width: 100%;
+}
+
+.form--item textarea {
+    resize: vertical;
+    min-height: 1.6em;
+    height: 10em;
 }
 
 .form--item {
@@ -160,8 +174,12 @@ footer p {
     margin: 0 25px;
 }
 
-.flex--wrapper button {
+.flex--wrapper button, .flex--wrapper:not('type="submit"') {
     margin: auto;
+}
+
+.flex--dir-right {
+    flex-direction: row-reverse;
 }
 
 .block {
@@ -188,6 +206,22 @@ footer p {
 .container--w2, .container--w3 {
     display: grid;
     min-height: 257px;
+}
+
+.container--w2__no-min-height {
+    min-height: unset;
+}
+
+.container--w3__no-min-height {
+    min-height: unset;
+}
+
+.container--w2__fit-content {
+    height: fit-content;
+}
+
+.container--w3__fit-content {
+    height: fit-content;
 }
 
 .container--w2 {
@@ -337,25 +371,28 @@ img {
     border-radius: 10px;
 }
 
+.checkout table td img {
+    border-radius: 10px;
+}
+
 .checkout table th:nth-child(1), .checkout table td:nth-child(1) {
-    width: 300px;
+    width: 400px;
 }
 
-.checkout table th:nth-child(2), .checkout table td:nth-child(2) {
-    width: 300px;
-}
-
-.checkout table th:nth-child(n+3), .checkout table td:nth-child(n+3) {
+.checkout table th:nth-child(n+2), .checkout table td:nth-child(n+2) {
     width: 150px;
 }
 
-.checkout table td {
-    height: 200px;
+.checkout table .accessoires--title {
+    font-weight: bold;
 }
 
-.checkout table .info p {
-    width: calc(100% - 20px);
-    margin: auto;
+.checkout table .accessoires--option {
+    user-select: none;
+}
+
+.checkout table .info {
+    margin: 16px;
 }
 
 .checkout table .number {
@@ -373,58 +410,4 @@ img {
 
 button[type="submit"] {
     float: right;
-}
-
-/* accesoires.html */
-
-.checkout-accesoires table {
-    margin: auto;
-}
-
-.checkout-accesoires table td img {
-    border-radius: 10px;
-}
-
-.checkout-accesoires table th:nth-child(1), .checkout table td:nth-child(1) {
-    width: 200px;
-}
-
-.checkout-accesoires table th:nth-child(2), .checkout table td:nth-child(2) {
-    width: 300px;
-}
-
-.checkout-accesoires table th:nth-child(n+3), .checkout table td:nth-child(n+3) {
-    width: 175px;
-}
-
-.checkout-accesoires table td {
-    height: 125px;
-}
-
-.checkout-accesoires table .info p {
-    width: calc(100% - 20px);
-    margin: auto;
-}
-
-.checkout-accesoires table .number {
-    text-align: center;
-    width: 50px;
-}
-
-.checkout-accesoires table .number input {
-    width: 35px;
-}
-
-.checkout-accesoires table .price {
-    text-align: center;
-}
-
-button[type="submit"] {
-    float: right;
-}
-.helmet-image {
-    height: 100px;
-    width: 100%;
-    padding-left: 20%;
-    padding-right: 20%;
 }

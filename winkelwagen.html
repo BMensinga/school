@@ -25,22 +25,40 @@
         <h1>Winkelwagen</h1>
     </section>
     <section class="checkout">
-        <form>
+        <form class="form--checkout" action="#" method="post">
             <table>
                 <tr>
                     <th><p>Artikelomschrijving</p></th>
-                    <th></th>
                     <th><p>Aantal</p></th>
                     <th><p>Prijs</p></th>
                 </tr>
                 <tr>
-                    <td><img src="images/fiets3_winkel.jpg"/></td>
-                    <td class="info"><p>Een zeer luxe sportieve heren fiets. De fiets is in verschillende kleuren verkrijgbaar. </p></td>
+                    <td>
+                        <div class="container--w2 container--w2__no-min-height container--w2__fit-content">
+                            <img src="images/fiets3_winkel.jpg"/>
+                            <p class="info">Een zeer luxe sportieve heren fiets. De fiets is in verschillende kleuren verkrijgbaar. </p>
+                        </div>
+                        <div class="accessoires">
+                            <p class="accessoires--title">Accessoires</p>
+                            <div class="container--w2 container--w2__no-min-height">
+                                <div class="accessoires--option">
+                                    <label for="helmet">Fiets helm</label>
+                                    <input type="checkbox" name="helmet" id="helmet"/>
+                                </div>
+                                <div class="accessoires--option">
+                                    <label for="childseat">Kinder zitje</label>
+                                    <input type="checkbox" name="childseat" id="childseat"/>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                     <td class="number"><input type="number" min="1" value="1"/></td>
                     <td class="price"><p>&euro; 599,-</p></td>
                 </tr>
             </table>
-            <button type="submit">Betalen</button>
+            <div class="flex--wrapper flex--dir-right" >
+                <button type="submit">Betalen</button>
+            </div>
         </form>
     </section>
 </div>
