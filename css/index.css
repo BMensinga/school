@@ -414,7 +414,7 @@ button[type="submit"] {
 }
 
 /* Medewerkers.html */
-.customer {
+.coworkers {
     background-color: var(--main-text-color);
     border-radius: 10px;
     text-align: center;
