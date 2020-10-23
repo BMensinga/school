@@ -412,3 +412,11 @@ img {
 button[type="submit"] {
     float: right;
 }
+
+/* Medewerkers.html */
+.customer {
+    background-color: var(--main-text-color);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
