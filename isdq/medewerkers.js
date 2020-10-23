@@ -15,10 +15,10 @@ medewerkers.push(medewerkerThree);
 medewerkers.push(medewerkerFour);
 medewerkers.push(medewerkerFive);
 
-// ForLoop medewerkers
-for (let i = 0; i < medewerkers.length; i++) {
-    console.log(medewerkers[i]);
-}
+// // ForLoop medewerkers
+// for (let i = 0; i < medewerkers.length; i++) {
+//     console.log(medewerkers[i]);
+// }
 
 // Print medewerker in HTML
 document.querySelector("#first").innerHTML = medewerkerOne.Firstname + " " + medewerkerOne.Lastname;
