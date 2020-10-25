@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
 // Create an empty array for medewerkers.
 const medewerkers = [];
 
@@ -28,5 +30,4 @@ function showFullObject(array, key) {
 
 // Print first medewerker in the HTML file.
 document.querySelector("#first").innerHTML = showFullObject(medewerkers, 0);
-
-
+});
