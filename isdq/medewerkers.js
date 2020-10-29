@@ -17,17 +17,20 @@ for (let i = 1; i <= 5; i++) {
 
 // Return the full object in the array if it exists.
 function showFullObject(array, key) {
-    for (let i = 0; i < array.length; i++) {
-        if (key === i) {
-            let object = array[i];
-            return `Medewerker is ${object.firstName} ${object.lastName}`;
+    if (array.length > key) {
+        for (let i = 0; i < array.length; i++) {
+            if (key === i) {
+                let object = array[i];
+                return `Medewerker is ${object.firstName} ${object.lastName}`;
+            }
         }
-        else {
-            return 'Value does not exist!';
-        }
+    } else {
+        let selectedMederwerker = key;
+        selectedMederwerker++;
+        return `Er bestaat geen ${selectedMederwerker}e medewerker.`;
     }
 }
 
 // Print first medewerker in the HTML file.
-document.querySelector("#first").innerHTML = showFullObject(medewerkers, 0);
+document.querySelector("#first").innerHTML = showFullObject(medewerkers, 4);
 });
