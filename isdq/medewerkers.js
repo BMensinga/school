@@ -32,5 +32,5 @@ function showFullObject(array, key) {
 }
 
 // Print first medewerker in the HTML file.
-document.querySelector("#first").innerHTML = showFullObject(medewerkers, 4);
+document.querySelector("#first").innerHTML = showFullObject(medewerkers, 0);
 });
