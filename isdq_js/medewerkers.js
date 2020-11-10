@@ -18,5 +18,5 @@ var medewerkers = [
     new Medewerker ('Steven', 'Erikson', 39, 'male', 'green'),
 ];
 
-document.getElementById("first").innerHTML = medewerkers[0].firstName + " " + medewerkers[0].lastName;
+document.getElementById("first").innerHTML = "Eerste medewerker is: " + medewerkers[0].firstName + " " + medewerkers[0].lastName ;
 });
