@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Set dropdown item id.
             p.setAttribute("class",`dropdownItem`);
             p.setAttribute("id",`${i}`);
+
+            dropdown.parentElement.setAttribute('class', 'selectDropdown');
         }
     }
 
