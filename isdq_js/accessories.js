@@ -1,32 +1,54 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Create a empty array accessories.
-    const accessories = [];
-
-    // Create 5 accessory objects.
-    let accessory1 = {accessoryName: 'Helm', price: 32.00};
-    let accessory2 = {accessoryName: 'Fietstas', price: 14.99};
-    let accessory3 = {accessoryName: 'Voor lamp', price: 2.10};
-    let accessory4 = {accessoryName: 'Achter lamp', price: 2.50};
-    let accessory5 = {accessoryName: 'Bagage drager', price: 49.99};
-
-    // Push all accessories objects into accessories array.
-    for (let i = 1; i <= 5; i++) {
-        accessories.push(eval("accessory" + i));
+    function Accessory(accessory, price) {
+        this.accessory = accessory;
+        this.price = price;
     }
 
-    // Return the full object in the array if it exists.
-    function showFullObject(array, key) {
-        for (let i = 0; i < array.length; i++) {
-            if (key === i) {
-                let object = array[i];
-                return `Accessoire ${object.accessoryName} is \t&euro;${object.price},-`;
-            }
-            else {
-                return 'Value does not exist!';
-            }
+    let accessories = [
+        new Accessory ('Helm', 32.00),
+        new Accessory ('Fietstas', 14.99),
+        new Accessory ('Voor lamp',  2.10),
+        new Accessory ('Achter lamp', 2.50),
+        new Accessory ('Bagage drager', 49.99)
+    ];
+
+    function ShowDropdownItems() {
+        for (let i = 0; i < accessories.length; i++) {
+            // Creating elements and getting dropdown menu.
+            let dropdown = document.getElementById("dropdown");
+            let li = document.createElement("li");
+            let p = document.createElement("p");
+
+            // Getting current text.
+            let text = document.innerHTML = `Accessoire ${accessories[i].accessory} is \t&euro;${accessories[i].price},-`;
+
+            // Appending li and p tags to the dropdown.
+            dropdown.appendChild(li);
+            li.appendChild(p);
+
+            // Set HTML code to be that of the text var.
+            p.innerHTML = text;
+            // Set dropdown item id.
+            p.setAttribute("class",`dropdownItem`);
+            p.setAttribute("id",`${i}`);
+
+            // Add class for the selected dropdown.
+            dropdown.parentElement.setAttribute('class', 'selectDropdown');
         }
     }
 
-    // Print first accessory in the HTML file.
-    document.querySelector("#first").innerHTML = showFullObject(accessories, 0);
+    function showDropdownItem(item) {
+        document.getElementById("first").innerHTML = `Accessoire ${accessories[item].accessory} is \t&euro;${accessories[item].price},-`;
+    }
+
+    ShowDropdownItems();
+
+    document.querySelectorAll('.dropdownItem').forEach( item=> {
+        item.addEventListener('click', event => {
+            let id = item.getAttribute('id');
+            showDropdownItem(id);
+        })
+    })
+
+    document.getElementById("first").innerHTML = `Accessoire ${accessories[0].accessory} is \t&euro;${accessories[0].price},-`;
 });
