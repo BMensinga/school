@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             p.setAttribute("class",`dropdownItem`);
             p.setAttribute("id",`${i}`);
 
+            // Add class for the selected dropdown.
             dropdown.parentElement.setAttribute('class', 'selectDropdown');
         }
     }
