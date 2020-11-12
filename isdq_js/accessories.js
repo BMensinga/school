@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function Accessory(accessoryName, price) {
-        this.accessory = accessoryName;
+    function Accessory(accessory, price) {
+        this.accessory = accessory;
         this.price = price;
     }
 
@@ -11,6 +11,41 @@ document.addEventListener("DOMContentLoaded", function() {
         new Accessory ('Achter lamp', 2.50),
         new Accessory ('Bagage drager', 49.99)
     ];
+
+    function ShowDropdownItems() {
+        for (let i = 0; i < accessories.length; i++) {
+            // Creating elements and getting dropdown menu.
+            let dropdown = document.getElementById("dropdown");
+            let li = document.createElement("li");
+            let p = document.createElement("p");
+
+            // Getting current text.
+            let text = document.innerHTML = `Accessoire ${accessories[i].accessory} is \t&euro;${accessories[i].price},-`;
+
+            // Appending li and p tags to the dropdown.
+            dropdown.appendChild(li);
+            li.appendChild(p);
+
+            // Set HTML code to be that of the text var.
+            p.innerHTML = text;
+            // Set dropdown item id.
+            p.setAttribute("class",`dropdownItem`);
+            p.setAttribute("id",`${i}`);
+        }
+    }
+
+    function showDropdownItem(item) {
+        document.getElementById("first").innerHTML = `Accessoire ${accessories[item].accessory} is \t&euro;${accessories[item].price},-`;
+    }
+
+    ShowDropdownItems();
+
+    document.querySelectorAll('.dropdownItem').forEach( item=> {
+        item.addEventListener('click', event => {
+            let id = item.getAttribute('id');
+            showDropdownItem(id);
+        })
+    })
 
     document.getElementById("first").innerHTML = `Accessoire ${accessories[0].accessory} is \t&euro;${accessories[0].price},-`;
 });
