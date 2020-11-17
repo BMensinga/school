@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (goThroughCheck) {
                     addItemToArray(inputs);
                 } else {
-                    alert('De accessoire bestaat al! Voeg een ander accessoire toe');
+                    alert('De accessoire bestaat al! Voeg een andere accessoire toe');
                 }
             }
         }
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
             addItem.push(inputs[i].value);
         }
 
-        // Add new accessory.
+        // Add new accessory with all fields in your form. Every addItem should be a field in the array.
         accessories.push(new Accessory(addItem[0], addItem[1]));
 
         // console.log full array.
@@ -97,6 +97,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Update dropdown menu.
         ShowDropdownItems();
     }
+
+    // Run ShowDropdownItems().
+    ShowDropdownItems();
 
     // When you click on an item in the dropdown call showDropdownItem with the parameter id of the item you clicked on.
     document.querySelectorAll('.dropdownItem').forEach( item=> {
@@ -116,9 +119,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let formId = document.getElementById("form").getAttribute('id');
         serializeForm(formId);
     });
-
-    // Run ShowDropdownItems().
-    ShowDropdownItems();
 
     // Get #first element and set the html to be the string.
     document.getElementById("first").innerHTML = `Accessoire ${accessories[0].accessory} is \t&euro;${accessories[0].price},-`;
