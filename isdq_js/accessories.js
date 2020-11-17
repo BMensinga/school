@@ -51,30 +51,32 @@ document.addEventListener("DOMContentLoaded", function() {
     // Check if values put in form are already filled in. If not run the addItemToArray().
     function serializeForm(formId) {
         let inputs;
+        let goThroughCheck = true;
 
         // Get all inputs in form.
         inputs = document.getElementById(formId).getElementsByTagName('input');
 
-        // Serialize the inputs one by one.
+        // Serialize the inputs one by one and change the goThroughCheck if element already exists.
         for (let i = 0; i < inputs.length; i++) {
+
             // Get check attribute from input element.
             let check = document.getElementsByTagName('input')[i].getAttribute('check');
+
             // Check if field needs to be checked.
             if (check != 'none') {
-                let goThroughCheck = true;
-
                 for (let j = 0; j < accessories.length; j++) {
                     if (inputs[i].value == accessories[j][Object.keys(accessories[j])[i]]) {
                         goThroughCheck = false;
                     }
                 }
-
-                if (goThroughCheck) {
-                    addItemToArray(inputs);
-                } else {
-                    alert('De accessoire bestaat al! Voeg een andere accessoire toe');
-                }
             }
+        }
+
+        if (goThroughCheck) {
+
+            addItemToArray(inputs);
+        } else {
+            alert('De accessoire bestaat al! Voeg een andere accessoire toe');
         }
     }
 
@@ -85,8 +87,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Get all values from inputs and push them in the addItem array.
         for (let i = 0; i < inputs.length; i++) {
-            addItem.push(inputs[i].value);
+            /* Check if input is a number. If so convert it to a float and push it into the array. Else push item into
+            * the array.
+            */
+            if (!isNaN(inputs[i].value) && inputs[i].value !== "") {
+                let convertedInput = Number(inputs[i].value);
+                addItem.push(convertedInput);
+            } else {
+                addItem.push(inputs[i].value);
+            }
         }
+        console.log(addItem);
 
         // Add new accessory with all fields in your form. Every addItem should be a field in the array.
         accessories.push(new Accessory(addItem[0], addItem[1]));
