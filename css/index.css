@@ -198,7 +198,7 @@ footer p {
 }
 
 .block {
-    display: block;
+    display: block !important;
 }
 
 /* index.html */
@@ -434,4 +434,10 @@ button[type="submit"] {
     border-radius: 10px;
     text-align: center;
     position: relative;
+}
+
+/* JS form */
+
+#form {
+    display: none;
 }
