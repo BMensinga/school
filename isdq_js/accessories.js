@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", function() {
             // Add class for the selected dropdown.
             dropdown.parentElement.setAttribute('class', 'selectDropdown');
         }
+
+        // When you click on an item in the dropdown call showDropdownItem with the parameter id of the item you clicked on.
+        document.querySelectorAll('.dropdownItem').forEach( item=> {
+            item.addEventListener('click', event => {
+                let id = item.getAttribute('id');
+                showDropdownItem(id);
+            });
+        });
     }
 
     // Update the text in #first id with that of item var.
@@ -110,14 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Run ShowDropdownItems().
     ShowDropdownItems();
-
-    // When you click on an item in the dropdown call showDropdownItem with the parameter id of the item you clicked on.
-    document.querySelectorAll('.dropdownItem').forEach( item=> {
-        item.addEventListener('click', event => {
-            let id = item.getAttribute('id');
-            showDropdownItem(id);
-        });
-    });
 
     // If you click on the accessory-button show the form.
     document.getElementById("accessory-button").addEventListener('click', event => {
