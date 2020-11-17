@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 addItem.push(inputs[i].value);
             }
         }
-        console.log(addItem);
 
         // Add new accessory with all fields in your form. Every addItem should be a field in the array.
         accessories.push(new Accessory(addItem[0], addItem[1]));
