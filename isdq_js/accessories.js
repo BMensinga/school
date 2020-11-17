@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
+        // Check if goThroughCheck is true run addItemToArray(). Else notify user that item already exists.
         if (goThroughCheck) {
-
             addItemToArray(inputs);
         } else {
             alert('De accessoire bestaat al! Voeg een andere accessoire toe');
