@@ -13,7 +13,7 @@ selection.addEventListener('change', () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-function Klant (voornaam, achternaam, leeftijd, woonplaats) {
+function Klant (voornaam, achternaam, geboortedatum, woonplaats) {
     this.voornaam = voornaam;
     this.achternaam = achternaam;
     this.geboortedatum = geboortedatum;
