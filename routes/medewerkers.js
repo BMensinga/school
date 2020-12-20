@@ -6,7 +6,7 @@ module.exports = (params) => {
   const { medewerkerService } = params;
 
   router.get("/", async (request, response) => {
-    const medewerkers = await medewerkerService.getlist();
+    const medewerkers = await medewerkerService.getList();
     return response.json(medewerkers);
   });
   router.get("/:shortname", (request, response) => {

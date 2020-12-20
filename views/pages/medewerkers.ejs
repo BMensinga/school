@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homepage <%= pageTitle %></title>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <% if(medewerkers.length) { %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Voornaam</th>
+          <th scope="col">Achternaam</th>
+          <th scope="col">Geslacht</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i = 0; i< medewerkers.length; i++) { %>
+        <tr>
+          <th scope="row"><%= (i+1) %></th>
+          <td><%= medewerkers[i].firstname %></td>
+          <td><%= medewerkers[i].lastname %></td>
+          <td><%= medewerkers[i].gender %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>
