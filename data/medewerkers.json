@@ -1,28 +1,28 @@
 {
   "medewerkers": [
     {
-      "firstname": "Gerard",
-      "lastname": "de Jong",
+      "firstName": "Gerard",
+      "lastName": "de Jong",
       "gender": "man"
     },
     {
-      "firstname": "Marieke",
-      "lastname": "de Vries",
+      "firstName": "Marieke",
+      "lastName": "de Vries",
       "gender": "vrouw"
     },
     {
-      "firstname": "Hans",
-      "lastname": "Dijkstra",
+      "firstName": "Hans",
+      "lastName": "Dijkstra",
       "gender": "man"
     },
     {
-      "firstname": "Amber",
-      "lastname": "Mulder",
+      "firstName": "Amber",
+      "lastName": "Mulder",
       "gender": "vrouw"
     },
     {
-      "firstname": "Ronald",
-      "lastname": "de Bruijn",
+      "firstName": "Ronald",
+      "lastName": "de Bruijn",
       "gender": "man"
     }
   ]

@@ -3,14 +3,12 @@ const express = require("express");
 const router = express.Router();
 
 module.exports = (params) => {
-  const { medewerkerService } = params;
-
+  console.log(params);
+  const { medewerkersService } = params;
+  console.log(params.medewerkersService);
   router.get("/", async (request, response) => {
-    const medewerkers = await medewerkerService.getList();
+    const medewerkers = await medewerkersService.getList();
     return response.json(medewerkers);
-  });
-  router.get("/:shortname", (request, response) => {
-    return response.send(`Deze pagina is van: ${request.params.shortname}`);
   });
 
   return router;
