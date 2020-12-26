@@ -6,6 +6,7 @@ const MedewerkersService = require("./services/MedewerkersService");
 const medewerkersService = new MedewerkersService("./data/medewerkers.json");
 
 const routes = require("./routes");
+const medewerkers = require("./routes/medewerkers.js");
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use(
     medewerkersService,
   })
 );
+
+app.use(medewerkers);
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}!`);
