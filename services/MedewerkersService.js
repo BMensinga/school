@@ -25,8 +25,8 @@ class MedewerkersService {
     const data = await this.getData();
     return data.map((medewerkers) => {
       return {
-        name: medewerkers.firstName,
-        lastname: medewerkers.lastName,
+        firstname: medewerkers.firstname,
+        lastname: medewerkers.lastname,
         gender: medewerkers.gender,
       };
     });

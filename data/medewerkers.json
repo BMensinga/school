@@ -1,29 +1,29 @@
 {
   "medewerkers": [
     {
-      "firstName": "Gerard",
-      "lastName": "de Jong",
-      "gender": "man"
+      "firstname": "Gerard",
+      "lastname": "de Jong",
+      "gender": "Man"
     },
     {
-      "firstName": "Marieke",
-      "lastName": "de Vries",
-      "gender": "vrouw"
+      "firstname": "Marieke",
+      "lastname": "de Vries",
+      "gender": "Vrouw"
     },
     {
-      "firstName": "Hans",
-      "lastName": "Dijkstra",
-      "gender": "man"
+      "firstname": "Hans",
+      "lastname": "Dijkstra",
+      "gender": "Man"
     },
     {
-      "firstName": "Amber",
-      "lastName": "Mulder",
-      "gender": "vrouw"
+      "firstname": "Amber",
+      "lastname": "Mulder",
+      "gender": "Vrouw"
     },
     {
-      "firstName": "Ronald",
-      "lastName": "de Bruijn",
-      "gender": "man"
+      "firstname": "Ronald",
+      "lastname": "de Bruijn",
+      "gender": "Man"
     }
   ]
 }
