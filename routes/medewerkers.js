@@ -10,7 +10,7 @@ module.exports = (params) => {
 
   router.get("/", async (request, response) => {
     const medewerkers = await medewerkersService.getList();
-    return response.render("medewerkers/index.ejs", {
+    return response.render("medewerkers/medewerkers.ejs", {
       pageTitle: "Medewerkers Objects",
       medewerkers,
     });
