@@ -3,27 +3,32 @@
     {
       "firstname": "Gerard",
       "lastname": "de Jong",
-      "gender": "Man"
+      "gender": "Man",
+      "functie": "Reperateur"
     },
     {
       "firstname": "Marieke",
       "lastname": "de Vries",
-      "gender": "Vrouw"
+      "gender": "Vrouw",
+      "functie": "Verkoopster"
     },
     {
       "firstname": "Hans",
       "lastname": "Dijkstra",
-      "gender": "Man"
+      "gender": "Man",
+      "functie": "Verkoper"
     },
     {
       "firstname": "Lindsey",
       "lastname": "Barron",
-      "gender": "Vrouw"
+      "gender": "Vrouw",
+      "functie": "Baliemedewerkster"
     },
     {
       "firstname": "Valerie",
       "lastname": "Krijgsman",
-      "gender": "Vrouw"
+      "gender": "Vrouw",
+      "functie": "Baliemedewerkster"
     }
   ]
 }

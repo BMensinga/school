@@ -28,6 +28,7 @@ class MedewerkersService {
         firstname: medewerkers.firstname,
         lastname: medewerkers.lastname,
         gender: medewerkers.gender,
+        functie: medewerkers.functie,
       };
     });
   }
