@@ -3,19 +3,23 @@ const express = require("express");
 const router = express.Router();
 
 const sql = require("mssql");
-const dbConn = require("../lib/db");
-const request = new sql.Request();
+const dbConfig = require("../lib/db");
 
 module.exports = (params) => {
   router.get("/", function (req, res, next) {
-    request.query("SELECT * FROM dbo.medewerkers", function (err, rows) {
+    let connection = sql.connect(dbConfig);
+    const request = new sql.Request();
+    request.query("SELECT * FROM medewerkers", function (err, rows) {
+      console.log("iets");
+      console.log(err);
       if (err) {
-        req.flash("error", err);
-
-        res.render("pages/medewerkersdb.ejs", { pageTitle: "test", data: "" });
+        res.render("pages/medewerkersdb.ejs", {
+          pageTitle: "MedewerkersDB",
+          data: "",
+        });
       } else {
         let newResults = [];
-        for (let key in results) {
+        for (const key in results) {
           if (key === "recordsets") {
             results[key].forEach((arr) => {
               arr.forEach((obj) => {
@@ -32,9 +36,10 @@ module.exports = (params) => {
         res.render("pages/medewerkersdb.ejs", {
           pageTitle: "MSSQL Data",
           data: rows,
-        }
-      };
-    );
+        });
+      }
+    });
   });
+
   return router;
 };
