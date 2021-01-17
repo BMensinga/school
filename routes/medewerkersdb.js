@@ -9,33 +9,18 @@ module.exports = (params) => {
   router.get("/", function (req, res, next) {
     let connection = sql.connect(dbConfig);
     const request = new sql.Request();
-    request.query("SELECT * FROM medewerkers", function (err, rows) {
-      console.log("iets");
-      console.log(err);
+    request.query("SELECT firstname, lastname, gender, functie FROM medewerkers order by firstname", function (err, results) {
       if (err) {
         res.render("pages/medewerkersdb.ejs", {
           pageTitle: "MedewerkersDB",
           data: "",
         });
       } else {
-        let newResults = [];
-        for (const key in results) {
-          if (key === "recordsets") {
-            results[key].forEach((arr) => {
-              arr.forEach((obj) => {
-                Object.keys(obj).forEach((key) => {
-                  newResults.push(obj[key]);
-                });
-              });
-            });
-          }
-        }
-
-        rows = JSON.parse(newResults);
+        let result = results.recordset;
 
         res.render("pages/medewerkersdb.ejs", {
           pageTitle: "MSSQL Data",
-          data: rows,
+          data: result,
         });
       }
     });
