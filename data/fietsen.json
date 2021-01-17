@@ -1,0 +1,29 @@
+{
+  "fietsen": [
+    {
+      "fiets": "Herenfiets",
+      "dagprijs": "€10.00",
+      "nieuwprijs": "€250.00"
+    },
+    {
+      "fiets": "Damesfiets",
+      "dagprijs": "€10.00",
+      "nieuwprijs": "€199.99"
+    },
+    {
+      "fiets": "Mountainbike",
+      "dagprijs": "€15.00",
+      "nieuwprijs": "€325.00"
+    },
+    {
+      "fiets": "Kinderfiets",
+      "dagprijs": "€2,99",
+      "nieuwprijs": "€75.00"
+    },
+    {
+      "fiets": "Racefiets",
+      "dagprijs": "€25.00",
+      "nieuwprijs": "€5000.00"
+    }
+  ]
+}

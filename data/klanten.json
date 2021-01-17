@@ -1,0 +1,29 @@
+{
+  "klanten": [
+    {
+      "firstname": "Bas",
+      "lastname": "Mensinga",
+      "gender": "Man"
+    },
+    {
+      "firstname": "Dylan",
+      "lastname": "Meyer",
+      "gender": "Man"
+    },
+    {
+      "firstname": "Stiven",
+      "lastname": "Manuel",
+      "gender": "Man"
+    },
+    {
+      "firstname": "Tim",
+      "lastname": "Koorevaar",
+      "gender": "man"
+    },
+    {
+      "firstname": "Niels",
+      "lastname": "Klomp",
+      "gender": "Man"
+    }
+  ]
+}

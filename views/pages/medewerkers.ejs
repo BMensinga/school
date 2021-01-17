@@ -1,0 +1,88 @@
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= pageTitle %></title>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo--wrapper">
+          <a href="/"
+            ><img class="logo--image" src="images/logo.png"
+          /></a>
+        </div>
+        <ul>
+          <li>
+            <a href="medewerkers"><p>Medewerkers</p></a>
+          </li>
+          <li>
+            <a href="fietsen"><p>Fietsen</p></a>
+          </li>
+          <li>
+            <a href="klanten"><p>Klanten</p></a>
+          </li>
+          <li>
+            <a href="accessoires"><p>Accessoires</p></a>
+          </li>
+          <li>
+            <a href="medewerkersdb"><p>MedewerkersDB</p></a>
+          </li>
+          <li>
+            <a href="fietsendb"><p>FietsenDB</p></a>
+          </li>
+          <li>
+            <a href="klantendb"><p>KlantenDB</p></a>
+          </li>
+          <li>
+            <a href="accessoiresdb"><p>AccessoiresDB</p></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h3 class="caption"><p>Medewerkers Objecten</p></h3>
+      <div>
+        <% if(medewerkers.length) { %>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th scope="col"><p>Nummer</p></th>
+              <th scope="col"><p>Voornaam</p></th>
+              <th scope="col"><p>Achternaam</p></th>
+              <th scope="col"><p>Geslacht</p></th>
+              <th scope="col"><p>Functie</p></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i = 0; i<medewerkers.length; i++) { %> 
+            <tr>
+                <th scope="row"><p><%= (i+1) %></p></th>
+                <td><p><%= medewerkers[i].firstname%></p></td>
+                <td><p><%= medewerkers[i].lastname%></p></td>
+                <td><p><%= medewerkers[i].gender%></p></td>
+                <td><p><%= medewerkers[i].functie%></p></td>
+            </tr>
+            <% } %> 
+          </tbody>
+        </table>
+        <% } %> 
+
+        <% if(!medewerkers.length) { %>
+          <p class="text-center"> Geen cursus gevonden!</p>~
+          <% } %>  
+      </div>
+    </main>
+
+    <footer class="container--text-margin">
+      <p>Copyright &copy; 2020 - DBT Software</p>
+      <p class="footer--small-note">
+        Crafted with <span class="footer--heart">&#10084;</span> by Tim
+      </p>
+    </footer>
+  </body>
+</html>
