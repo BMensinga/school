@@ -5,6 +5,7 @@ const medewerkersdbRoute = require("./medewerkersdb");
 const accessoiresRoute = require("./accessoires");
 const accessoiresdbRoute = require("./accessoiresdb");
 const fietsenRoute = require("./fietsen");
+const fietsendbRoute = require("./fietsendb");
 
 const router = express.Router();
 
@@ -18,6 +19,7 @@ module.exports = (params) => {
   router.use("/accessoires", accessoiresRoute(params));
   router.use("/accessoiresdb", accessoiresdbRoute(params));
   router.use("/fietsen", fietsenRoute(params));
+  router.use("/fietsendb", fietsendbRoute(params));
 
   return router;
 };
