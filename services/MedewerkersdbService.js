@@ -9,7 +9,7 @@ const readFile = util.promisify(fs.readFile);
 /**
  * Logic for fetching speakers information
  */
-class MedewerkersService {
+class MedewerkersdbService {
   /**
    * Constructor
    * @param {*} datafile Path to a JSON file that contains the medewerkers data
@@ -23,12 +23,12 @@ class MedewerkersService {
    */
   async getList() {
     const data = await this.getData();
-    return data.map((medewerkers) => {
+    return data.map((medewerkersdb) => {
       return {
-        firstname: medewerkers.firstname,
-        lastname: medewerkers.lastname,
-        gender: medewerkers.gender,
-        functie: medewerkers.functie,
+        firstname: medewerkersdb.firstname,
+        lastname: medewerkersdb.lastname,
+        gender: medewerkersdb.gender,
+        functie: medewerkersdb.functie,
       };
     });
   }
@@ -38,8 +38,8 @@ class MedewerkersService {
    */
   async getData() {
     const data = await readFile(this.datafile, "utf8");
-    return JSON.parse(data).medewerkers;
+    return JSON.parse(data).medewerkersdb;
   }
 }
 
-module.exports = MedewerkersService;
+module.exports = MedewerkersdbService;

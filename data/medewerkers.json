@@ -1,27 +1,34 @@
-[
-  {
-    "firstname": "Gerard",
-    "lastname": "de Jong",
-    "gender": "man"
-  },
-  {
-    "firstname": "Marieke",
-    "lastname": "de Vries",
-    "gender": "vrouw"
-  },
-  {
-    "firstname": "Hans",
-    "lastname": "Dijkstra",
-    "gender": "man"
-  },
-  {
-    "firstname": "Amber",
-    "lastname": "Mulder",
-    "gender": "vrouw"
-  },
-  {
-    "firstname": "Ronald",
-    "lastname": "de Bruijn",
-    "gender": "man"
-  }
-]
+{
+  "medewerkers": [
+    {
+      "firstname": "Gerard",
+      "lastname": "de Jong",
+      "gender": "Man",
+      "functie": "Reperateur"
+    },
+    {
+      "firstname": "Marieke",
+      "lastname": "de Vries",
+      "gender": "Vrouw",
+      "functie": "Verkoopster"
+    },
+    {
+      "firstname": "Hans",
+      "lastname": "Dijkstra",
+      "gender": "Man",
+      "functie": "Verkoper"
+    },
+    {
+      "firstname": "Lindsey",
+      "lastname": "Barron",
+      "gender": "Vrouw",
+      "functie": "Baliemedewerkster"
+    },
+    {
+      "firstname": "Daniëlle",
+      "lastname": "de Vrij",
+      "gender": "Vrouw",
+      "functie": "Baliemedewerkster"
+    }
+  ]
+}
