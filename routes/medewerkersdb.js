@@ -6,8 +6,8 @@ const sql = require("mssql");
 const dbConfig = require("../lib/db");
 
 module.exports = (params) => {
-  router.get("/", function (req, res, next) {
-    let connection = sql.connect(dbConfig);
+  router.get("/", function (req, res) {
+    sql.connect(dbConfig);
     const request = new sql.Request();
     request.query("SELECT firstname, lastname, gender, functie FROM medewerkers order by firstname", function (err, results) {
       if (err) {
