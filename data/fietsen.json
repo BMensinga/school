@@ -2,28 +2,28 @@
   "fietsen": [
     {
       "fiets": "Herenfiets",
-      "dagprijs": "€2.50",
-      "nieuwprijs": "€50.00"
+      "dagprijs": "€10.00",
+      "nieuwprijs": "€250.00"
     },
     {
       "fiets": "Damesfiets",
-      "dagprijs": "€2.00",
-      "nieuwprijs": "€9.99"
+      "dagprijs": "€10.00",
+      "nieuwprijs": "€199.99"
     },
     {
       "fiets": "Mountainbike",
-      "dagprijs": "€0.99",
-      "nieuwprijs": "€7.50"
+      "dagprijs": "€15.00",
+      "nieuwprijs": "€325.00"
     },
     {
       "fiets": "Kinderfiets",
-      "dagprijs": "€0,99",
-      "nieuwprijs": "€7.50"
+      "dagprijs": "€2,99",
+      "nieuwprijs": "€75.00"
     },
     {
-      "fiets": "Tandem",
-      "dagprijs": "€0.50",
-      "nieuwprijs": "€5.00"
+      "fiets": "Racefiets",
+      "dagprijs": "€25.00",
+      "nieuwprijs": "€5000.00"
     }
   ]
 }

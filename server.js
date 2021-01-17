@@ -3,9 +3,11 @@ const path = require("path");
 
 const MedewerkersService = require("./services/MedewerkersService");
 const AccessoiresService = require("./services/AccessoiresService");
+const FietsenService = require("./services/FietsenService");
 
 const medewerkersService = new MedewerkersService("./data/medewerkers.json");
 const accessoiresService = new AccessoiresService("./data/accessoires.json");
+const fietsenService = new FietsenService("./data/fietsen.json");
 
 const routes = require("./routes");
 // const medewerkers = require("./routes/medewerkers.js");
@@ -26,6 +28,7 @@ app.use(
   routes({
     medewerkersService,
     accessoiresService,
+    fietsenService,
   })
 );
 

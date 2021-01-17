@@ -25,7 +25,7 @@ class FietsenService {
     const data = await this.getData();
     return data.map((fietsen) => {
       return {
-        item: fietsen.fiets,
+        fiets: fietsen.fiets,
         dagprijs: fietsen.dagprijs,
         nieuwprijs: fietsen.nieuwprijs,
       };

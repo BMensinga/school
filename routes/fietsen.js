@@ -5,14 +5,14 @@ const router = express.Router();
 module.exports = (params) => {
   console.log(params);
 
-  const { accessoiresService } = params;
-  console.log(params.accessoiresService);
+  const { fietsenService } = params;
+  console.log(params.fietsenService);
 
   router.get("/", async (request, response) => {
-    const accessoires = await accessoiresService.getList();
-    return response.render("pages/accessoires.ejs", {
-      pageTitle: "Accessoires Objects",
-      accessoires,
+    const fietsen = await fietsenService.getList();
+    return response.render("pages/fietsen.ejs", {
+      pageTitle: "Fietsen Objects",
+      fietsen,
     });
   });
 
