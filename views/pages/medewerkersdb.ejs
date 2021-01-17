@@ -18,7 +18,7 @@
         </div>
         <ul>
           <li>
-            <a href="medewerkers"><p>Medewerkers</p></a>
+            <a href="medewerkersdb"><p>Medewerkers</p></a>
           </li>
           <li>
             <a href="#"><p>Assortiment</p></a>
@@ -43,6 +43,7 @@
               <th scope="col"><p>Voornaam</p></th>
               <th scope="col"><p>Achternaam</p></th>
               <th scope="col"><p>Geslacht</p></th>
+              <th scope="col"><p>Functie</p></th>
             </tr>
           </thead>
           <tbody>
@@ -52,6 +53,7 @@
                 <td><p><%= data[i].firstname%></p></td>
                 <td><p><%= data[i].lastname%></p></td>
                 <td><p><%= data[i].gender%></p></td>
+                <td><p><%= data[i].functie%></p></td>
             </tr>
             <% } %> 
           </tbody>
