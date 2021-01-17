@@ -1,0 +1,29 @@
+{
+  "accessoires": [
+    {
+      "item": "Helm",
+      "dagprijs": "€2.50",
+      "nieuwprijs": "€50.00"
+    },
+    {
+      "item": "Fietstas",
+      "dagprijs": "€2.00",
+      "nieuwprijs": "€9.99"
+    },
+    {
+      "item": "Voorlicht",
+      "dagprijs": "€0.99",
+      "nieuwprijs": "€7.50"
+    },
+    {
+      "item": "Achterlicht",
+      "dagprijs": "€0,99",
+      "nieuwprijs": "€7.50"
+    },
+    {
+      "item": "Fietsbel",
+      "dagprijs": "€0.50",
+      "nieuwprijs": "€5.00"
+    }
+  ]
+}
